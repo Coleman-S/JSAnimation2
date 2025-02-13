@@ -1,0 +1,104 @@
+/******************************************
+ * JSAnimation2 - Portfolio Intro
+ * Coleman Swarts
+ * Due Feb 13, 2025
+ * CSCI 324
+ * main css styling file
+******************************************/
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: #0d0d0d;
+   overflow: hidden;
+   font-family: "Courier New", monospace;
+   color: #00ff99;
+}
+
+canvas {
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 0;
+}
+
+/* Terminal Window */
+.terminal {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 20px;
+   color: #00ff99;
+   background: rgba(0, 0, 0, 0.85);
+   padding: 15px;
+   border-radius: 5px;
+   white-space: nowrap;
+   z-index: 10;
+   text-shadow: 0px 0px 5px #00ff99;
+}
+
+/* Blinking Cursor */
+.cursor {
+   display: inline-block;
+   width: 10px;
+   background: #00ff99;
+   animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+   0% {
+      opacity: 1;
+   }
+
+   50% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}
+
+/* Fake Code Scrolling */
+#fake-code {
+   font-size: 14px;
+   opacity: 0.6;
+   margin-bottom: 10px;
+   max-height: 100px;
+   overflow: hidden;
+}
+
+/* Press ENTER Prompt */
+#enter-text {
+   font-size: 16px;
+   opacity: 0;
+   margin-top: 10px;
+   animation: fadeIn 1.5s infinite alternate;
+}
+
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}
+
+.hidden {
+   display: none;
+}
+
+/* Main Content (Initially Hidden) */
+#main-content {
+   display: none;
+   padding: 50px;
+   color: white;
+}
